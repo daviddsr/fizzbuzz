@@ -6,16 +6,22 @@ class FizzBuzz
 
   def sequence
     numbers.collect do |x|
-      if (x % 3 == 0) & (x % 5 == 0)
+      if multiple_of(3, x) & multiple_of(5, x)
         'FizzBuzz'
-      elsif (x % 3 == 0)
+      elsif multiple_of(3, x)
         'Fizz'
-      elsif (x % 5 == 0)
+      elsif multiple_of(5, x)
         'Buzz'
       else
         x
       end
     end
+  end
+
+  private
+
+  def multiple_of(n, x)
+    x % n == 0
   end
 end
 
