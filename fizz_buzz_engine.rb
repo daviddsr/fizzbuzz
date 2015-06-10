@@ -9,6 +9,7 @@ class FizzBuzzEngine
     return LOOKUP['3_and_5'] if multiple_of_three_and_five
     return LOOKUP[3] if multiple_of(3)
     return LOOKUP[5] if multiple_of(5)
+    @n
   end
 
   private
