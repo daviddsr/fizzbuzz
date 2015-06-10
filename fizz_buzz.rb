@@ -14,6 +14,18 @@ class FizzBuzz
     end
   end
 
+  def transform(n)
+    pairs = {}
+    (1..100).each do |x|
+      pairs[x] = x
+    end
+    result = {}
+    pairs.keys.each do |key|
+      result[key] = key.fizz_buzz
+    end
+    result[n]
+  end
+
   private
 
   def multiple_of(n, x)
