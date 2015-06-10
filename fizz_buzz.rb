@@ -1,3 +1,5 @@
+require_relative 'fizz_buzz_engine'
+
 
 class FizzBuzz
   def numbers
@@ -6,15 +8,8 @@ class FizzBuzz
 
   def sequence
     numbers.collect do |x|
-      if multiple_of(3, x) & multiple_of(5, x)
-        'FizzBuzz'
-      elsif multiple_of(3, x)
-        'Fizz'
-      elsif multiple_of(5, x)
-        'Buzz'
-      else
-        x
-      end
+        fbe = FizzBuzzEngine.new(x)
+        fbe.value
     end
   end
 
